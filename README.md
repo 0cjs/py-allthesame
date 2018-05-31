@@ -94,6 +94,11 @@ parameter:
         for ys in [ (3,4), (3,4,3), (3,3,3,3,3,4) ]:
             assert allthesame(ys) is False
 
+Testing the two versions of `all_the_same()` given in section 6 against
+the code above indicates that, though they build separate lists in
+different orders, they fortunately don't try to mutate the original
+list. It's nice to have the confidence in this that the test brings.
+
 You'll note here that though the function is a predicate and one might
 consider it reasonable to return a “truthy” or “falsy” values, I
 explicitly test that it's returning `True` or `False`. This is
