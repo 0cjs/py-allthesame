@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+#   We don't want to depend on the environment because that makes tests
+#   fail mysteriously. (“But it worked on my machine!”)
+#   The current working directory is part of the environment, so let's
+#   try to make sure we don't care where this is run from.
+basedir=$(cd "$(dirname "$0")" && pwd -P)
+cd "$basedir"
+
+#   Where is this `-C` for clean build option documented? Right here!
+#   After all, this is used by developers, who are presumably reading
+#   the code they're running. (Yes, I know that's a naïve assumption.)
+[[ $1 == -C ]] && { shift; git clean -fdX; }
+
+#   Any further arguments are passed on to pytest below (try `-vv`)
+
+. activate -q
+pytest *.py "$@"
