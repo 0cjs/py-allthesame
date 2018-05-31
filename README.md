@@ -358,7 +358,31 @@ XXX To-do
   it “Comments.”
 
 
+Licenses
+--------
 
+No warranties are given for any of the material in this repo.
+
+This file (`README.md`) is Copyright 2018 by Curt J. Sampson
+<cjs@cynic.net> and licensed under a [Creative Commons Attribution 4.0
+International License][cc-by-4.0] (CC BY 4.0). Roughly: you are free
+to share (copy and redistribute in any format) and adapt (remix,
+transform and build upon the material for any purpose, even
+commercially), so long as you give appropriate credit, indicate if any
+changes were made and do not suggest that I endorse your use of it.
+Further, you may not restrict these rights from others to whom you
+pass this material.
+
+All other files in this repository (including `Test`, `activate` and
+`allthesame.py`) are written by me and dedicated to the public domain:
+do whatever you like with them. If you need further legal support for
+this please contact me and I will help you out with a [CC0 1.0 Public
+Domain Dedication][CC0-1.0] or similar.
+
+
+
+[CC-BY-4.0]: https://creativecommons.org/licenses/by/4.0/
+[CC0-1.0]: https://creativecommons.org/publicdomain/zero/1.0/
 [Git]: https://git-scm.com/
 [Pytest]: https://pytest.org/
 [`Test`]: Test
