@@ -350,12 +350,16 @@ provided some insight into the various things a professional developer
 thinks about and does even for such a simple function as this.
 
 
-XXX To-do
----------
+Comments
+--------
 
-* Blog post comments: file an issue! (And lets add a link to all the
-  issues, including closed ones, for this project on GitHub, calling
-  it “Comments.”
+If you have a comment, please start a thread or comment on one in the
+[comments section]. You'll need a GitHub account to do this.
+
+(If you're confused because the comments section looks just like the
+issues/PRs section for this repo on GitHub, that is indeed what it is.
+We're all developers here and are already used to this tool for
+commenting on things, so why use something else?)
 
 
 Licenses
@@ -392,6 +396,7 @@ Domain Dedication][CC0-1.0] or similar.
 [`sorted()`]: https://docs.python.org/3/library/functions.html#sorted
 [`unittest`]: https://docs.python.org/3/library/unittest.html
 [bags]: https://en.wikipedia.org/wiki/Bag_(mathematics)
+[comments section]: https://github.com/0cjs/py-allthesame/issues?q=
 [determining]: https://www.blog.pythonlibrary.org/2018/05/09/determining-if-all-elements-in-a-list-are-the-same-in-python/
 [generates]: https://docs.python.org/3/glossary.html#term-generator
 [gitwin]: https://git-scm.com/download/win
