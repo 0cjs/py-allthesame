@@ -339,13 +339,14 @@ elements are not all the same).
 So what have we looked at here that comprise “professional”
 development practices?
 
-1. Using Git even, for the small stuff, and even when it's not “code”
-   in the traditional sense.
+1. Using Git, even for the small stuff, and even when that stuff is
+   not “code” in the traditional sense.
 2. Using a test framework and, in fact, _starting_ with a test
    framework. And putting the tests close to the code.
-3. Making the test framework have minimal tendencies on the developers
-   environment and making it easy and obvious to use (“one click” or,
-   in this case, one command with no parameters necessary).
+3. Making the test framework have minimal dependencies on the
+   developer's environment. Making that framework it easy and obvious
+   to use (“one click” or, in this case, one command with no
+   parameters necessary).
 4. Using [Pytest] because it rocks. (It's not only Python's finest
    unit test framework, it's one of the nicest to use in any language.
    For dedicated TDD folks using similar “scripting” languages such
