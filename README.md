@@ -346,8 +346,10 @@ development practices?
 3. Making the test framework have minimal tendencies on the developers
    environment and making it easy and obvious to use (“one click” or,
    in this case, one command with no parameters necessary).
-4. Using [Pytest] because it rocks. (It's one of Python's best
-   features, and gives it a big advantage over other languages.)
+4. Using [Pytest] because it rocks. (It's not only Python's finest
+   unit test framework, it's one of the nicest to use in any language.
+   For dedicated TDD folks using similar “scripting” languages such
+   as Ruby, it's almost a reason to switch to Python.)
 5. Writing tests that use corner cases and assert behaviour about side
    effects (or lack thereof). Noting that this can make improving the
    code much, much easier.
