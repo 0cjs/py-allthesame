@@ -4,11 +4,13 @@ py-allthesame: Are all elements in a sequence the same?
 Today in my Reading Room (yes, the one with the porcelain seat) I was
 browsing Python blogs and came across the post [Determining if all
 Elements in a List are the Same in Python][determining]. This is
-interesting in the number of different techniques it shows, but my
-first thought, as a professional software developer, was along a
-somewhat different tack: “How would I write this for a production
-application?” This blog post describes my process and gives you the
-code I came up with.
+interesting in the number of different Python techniques it shows, but
+my first thought about how to approach this problem as a professional
+software developer, was along a somewhat different tack: “How would I
+write this for a production application?” In this blog post I use the
+idea of writing the `allthesame` function to demonstrate the issues I
+think about and address as someone writing code to be released to
+customers, maintained by others and used long-term.
 
 (By the way, it's likely that there are various things relating to
 Python and its ecosystem that could be improved here. Through I've
@@ -65,9 +67,8 @@ you should never be using `unittest` at all. (And Pytest will even run
 your `unittest` and `doctest` tests as well, to help you if you're
 converting.)
 
-Now that we're through all that basic setup (which actually took less
-time than writing these last two sections of this post), we can move
-on to the actual problem at hand.
+Now that we're through all that basic setup, we can move on to the
+actual problem at hand.
 
 
 3 The First Test and Immutability
