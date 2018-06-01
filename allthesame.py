@@ -40,10 +40,9 @@ def test_allthesame_nonterminate():
 
 def allthesame(iterable):
     iterator = iterable.__iter__()
-    try:
-        x0 = next(iterator)
-        for x in iterator:
-            if x != x0: return False
-        return True
-    except StopIteration:
-        return True
+    #   We don't care exactly what value we get back if the iterator is already
+    #   exhausted, since we won't be comparing it against anything anyway.
+    x0 = next(iterator, None)
+    for x in iterator:
+        if x != x0: return False
+    return True

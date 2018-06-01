@@ -254,30 +254,44 @@ already written above:
 
     def allthesame(iterable):
         iterator = iterable.__iter__()
-        try:
-            x0 = next(iterator)
-            for x in iterator:
-                if x != x0: return False
-            return True
-        except StopIteration:
-            return True
+        #   We don't care exactly what value we get back if the iterator is already
+        #   exhausted, since we won't be comparing it against anything anyway.
+        x0 = next(iterator, None)
+        for x in iterator:
+            if x != x0: return False
+        return True
 
-We ask the iterator for the first value, _x₀_, and then go through
-every subsequent value, _x_ and see if we can find something that
-isn't equal (our definition of “the same”). If we go through them all
+We start by setting _x₀_ to the first value returned by the iterator,
+or `None` if the iterator has no values. We then compare that to every
+subsequent value, _x_ and see if we can find something that isn't
+equal (our definition of “the same”). If we go through them all
 without finding one, we return True.
 
-As you can see from the above, it's slightly more tricky than just
-that, though; in the case of an empty iterator we can't fetch the
-first value and our call to `next()` will throw a `StopIteration`. So
-we need to catch that and, there being no values at all, we consider
-them all the same and, again, return `True`.
+If the iterator has no values available we don't care what value we
+assign to _x₀_ since we'll never be comparing it with anything anyway.
+
+This is basically the same solution as number 5 from [the original
+post][determining] except that I don't confusingly name the iterator
+`el`. (_el_ is traditional shorthand for _element_, and the iterator
+is not an element, it returns elements. Things like this are important
+because even a tiny chance that confusion would occur with any
+invdividual variable name adds up pretty quick when you think about
+how many variable names a full-time developer reads in a day.)
 
 You'll note that the tests were careful to provide the corner cases:
 no values and just one value, as well as the general case of more than
 one value. You should try changing the function above around to see
 what happens if you remove certain parts of it or rewrite it in a
 different way.
+
+If you look back through the Git logs, by the way, you'll see that
+this isn't my first solution. I originally had something longer and
+more complex that threw and caught `StopIteration` because in my
+initial [study of iterators][sedoc-iter] I'd missed that `next()` has
+an optional second argument. (See? I really am a beginner at Python.)
+The corner cases provided by the tests made it easy to be confident
+that this new version worked properly: it actually took me longer to
+type the function in than to fully test it.
 
 
 9 Non-termination
@@ -335,7 +349,8 @@ development practices?
 4. Using [Pytest] because it rocks. (It's one of Python's best
    features, and gives it a big advantage over other languages.)
 5. Writing tests that use corner cases and assert behaviour about side
-   effects (or lack thereof).
+   effects (or lack thereof). Noting that this can make improving the
+   code much, much easier.
 6. Generalizing functions to make them more broadly usable, where that
    makes sense. This can also make them easier to reason about.
 7. Understanding and using the _iterator_ generalization in Python.
@@ -405,6 +420,7 @@ Domain Dedication][CC0-1.0] or similar.
 [iterators]: https://docs.python.org/3/glossary.html#term-iterator
 [lists]: https://docs.python.org/3/library/stdtypes.html#lists
 [post]: https://github.com/0cjs/py-allthesame
+[sedoc-iter]: https://github.com/0cjs/sedoc/blob/master/lang/python/iter.md
 [sequence types]: https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
 [trees]: https://en.wikipedia.org/wiki/Tree_(data_structure)
 [tuples]: https://docs.python.org/3/library/stdtypes.html#tuples
