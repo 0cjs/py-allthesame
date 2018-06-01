@@ -1,20 +1,25 @@
-py-allthesame: Are all elements in a sequence the same?
-=======================================================
+py-allthesame: How to Write a Function in Python
+================================================
 
 Today in my Reading Room (yes, the one with the porcelain seat) I was
 browsing Python blogs and came across the post [Determining if all
-Elements in a List are the Same in Python][determining]. This is
-interesting in the number of different techniques it shows, but my
-first thought, as a professional software developer, was along a
-somewhat different tack: “How would I write this for a production
-application?” This blog post describes my process and gives you the
-code I came up with.
+Elements in a List are the Same in Python][determining]. This is very
+interesting in the number of different techniques it shows, and does
+indeed show the power of Python (albeit somewhat undermining the
+“there should be only one way to do it” idea).
 
-(By the way, it's likely that there are various things relating to
-Python and its ecosystem that could be improved here. Through I've
-been doing software development for a long, long time, I started
-programming in Python only about half a year ago, and haven't actually
-even done all that much of it yet.)
+But my first thought, as a professional software developer, was along
+a different tack: “How would I write this for a production
+application?” This blog post describes my process, focusing not much
+on the function itself but instead what goes around the function: the
+infrastructure that supports it and the environment in which it's
+tested and run.
+
+One note: it's likely that there are various things relating to Python
+and its ecosystem that could be improved here. Through I've been doing
+software development for a long, long time, I started programming in
+Python only about half a year ago, and even at that haven't actually
+written much code yet.
 
 
 1 Git
@@ -336,8 +341,15 @@ elements are not all the same).
 11 Wrapping Up
 --------------
 
-So what have we looked at here that comprise “professional”
-development practices?
+Overall, the implementation of the function itself is probably the
+least important part of the problem when your code is part of a large
+system being released to others. Putting that code into a supportive
+environment is the key, and once you've done that you may well rework
+it or change it out (as I've already done, see section 8 above) almost
+trivially.
+
+Specific things comprising professional development practices that
+we've looked at here are:
 
 1. Using Git, even for the small stuff, and even when that stuff is
    not “code” in the traditional sense.
