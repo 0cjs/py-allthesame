@@ -364,6 +364,15 @@ That's usually true of almost any code. But I hope that this post has
 provided some insight into the various things a professional developer
 thinks about and does even for such a simple function as this.
 
+You're probably feeling pretty tired after reading all this, and it
+must seem like this “professional” approach is a lot of work. Well, it
+probably is at the start, but once these things become habits they're
+very quick to do. Writing this blog post was several hours of work,
+but building the Git repo, test framework, tests and the function
+itself took less than twenty minutes, most of which was spent
+designing the tests (in other words, understanding the function I was
+trying to write).
+
 
 Comments
 --------
