@@ -416,8 +416,6 @@ to share (copy and redistribute in any format) and adapt (remix,
 transform and build upon the material for any purpose, even
 commercially), so long as you give appropriate credit, indicate if any
 changes were made and do not suggest that I endorse your use of it.
-Further, you may not restrict these rights from others to whom you
-pass this material.
 
 All other files in this repository (including `Test`, `activate` and
 `allthesame.py`) are written by me and dedicated to the public domain:
