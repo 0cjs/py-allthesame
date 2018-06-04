@@ -70,9 +70,9 @@ you should never be using `unittest` at all. (And Pytest will even run
 your `unittest` and `doctest` tests as well, to help you if you're
 converting.)
 
-Now that we're through all that basic setup (which actually took less
-time than writing these last two sections of this post), we can move
-on to the actual problem at hand.
+Now that we're through that basic setup (which takes only a few
+minutes once you get comfortable with it), we can move on to the
+actual problem at hand.
 
 
 3 The First Test and Immutability
