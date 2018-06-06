@@ -395,10 +395,13 @@ Comments
 If you have a comment, please start a thread or comment on one in the
 [comments section]. You'll need a GitHub account to do this.
 
-(If you're confused because the comments section looks just like the
-issues/PRs section for this repo on GitHub, that is indeed what it is.
-We're all developers here and are already used to this tool for
-commenting on things, so why use something else?)
+Wait. Is that comments section just the issues/PRs for this repo on
+GitHub? Indeed it is. We're all developers here who already use this
+for commenting on the design of code and design, so why not use it for
+commenting on the design of code?
+
+That said, if this is too weird, there's also a comment thread on
+[Reddit].
 
 
 Licenses
@@ -444,6 +447,7 @@ Domain Dedication][CC0-1.0] or similar.
 [iterators]: https://docs.python.org/3/glossary.html#term-iterator
 [lists]: https://docs.python.org/3/library/stdtypes.html#lists
 [post]: https://github.com/0cjs/py-allthesame
+[reddit]: https://www.reddit.com/r/Python/comments/8p0s8h/pyallthesame_how_to_write_a_function_in_python/
 [sedoc-iter]: https://github.com/0cjs/sedoc/blob/master/lang/python/iter.md
 [sequence types]: https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range
 [trees]: https://en.wikipedia.org/wiki/Tree_(data_structure)
