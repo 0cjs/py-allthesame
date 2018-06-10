@@ -39,7 +39,7 @@ def test_allthesame_nonterminate():
 
 
 def allthesame(iterable):
-    iterator = iterable.__iter__()
+    iterator = iter(iterable)
     #   We don't care exactly what value we get back if the iterator is already
     #   exhausted, since we won't be comparing it against anything anyway.
     x0 = next(iterator, None)

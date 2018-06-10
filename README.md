@@ -202,7 +202,7 @@ thing, so the first step is to get an iterator that will iterate
 across that thing:
 
         def allthesame(iterable):
-            iterator = iterable.__iter__()
+            iterator = iter(iterable)
 
 Now this may seem a bit confusing at first: what's the difference
 between an _iterable_ and an _iterator_? Well the _iterable_ is the
@@ -219,7 +219,7 @@ with the first one yet.
 But what if someone passes in an _iterator_ instead of an iterable,
 either through confusion or because that's all they have? No fear
 here; in a clever little recursive loop an iterator itself is
-iterable, and has an `__iter__()` method that returns itself.
+iterable, and thus `iter()` on it will just return itself.
 
 
 7 Writing the Code: The Algorithm
@@ -258,7 +258,7 @@ So here's our function, including the first couple of lines we'd
 already written above:
 
     def allthesame(iterable):
-        iterator = iterable.__iter__()
+        iterator = iter(iterable)
         #   We don't care exactly what value we get back if the iterator is already
         #   exhausted, since we won't be comparing it against anything anyway.
         x0 = next(iterator, None)
